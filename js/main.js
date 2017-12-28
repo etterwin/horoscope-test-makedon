@@ -21,22 +21,8 @@ if (mbc.tools.platform() === 'desktop') {
 
 var startSubscription = function () {
     mbc.tag('040 Попытка создания префилда - PRE');
-    mbc.pre({
-        success: function () {
-            mbc.tag('041 Префилд успешно создан - PRE');
-            mbc.check({
-                success: function (res) {
-                    mbc.tag('055 Оплата произведена. Редирект в мемберку.');
-                    setTimeout(function () {
-                        location.href = res.redirect;
-                    }, 3000);
-                }
-            });
-        },
-        error: function () {
-            mbc.tag('042 Ошибка создания префилда - PRE');
-        }
-    });
 }
+
+
 
 
